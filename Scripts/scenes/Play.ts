@@ -12,7 +12,7 @@ module scenes {
         // buttons
         private _btnReset: objects.Button;
         private _btnSpin: objects.Button;
-        private _btnQuit: objects.Button;
+        private _btnEnd: objects.Button;
         private _btnBet100: objects.Button;
 
         // numbers
@@ -285,7 +285,7 @@ module scenes {
             this.addChild(this._lblJackpot);
             this.addChild(this._lblmoney);
 
-            this.addChild(this._btnQuit);
+            this.addChild(this._btnEnd);
             this.addChild(this._btnReset);
             this.addChild(this._btnSpin);
             this.addChild(this._btnBet100);
@@ -306,7 +306,7 @@ module scenes {
             this._lblJackpot = new objects.Label("Jackpot:", "20px", "Helvetica", "#000000", 260, 150, false)
             this._lblmoney = new objects.Label("Money:", "20px", "Helvetica", "#000000", 260, 302, false)
             // Button 
-            this._btnQuit = new objects.Button("quitButton", 250, 415, true);
+            this._btnEnd = new objects.Button("quitButton", 250, 415, true);
             this._btnReset = new objects.Button("resetButton", 325, 415, true);
             this._btnSpin = new objects.Button("spinButton", 400, 415, true);
             // this._btnBet100 = new objects.Button("spinButton",200,300,true);
@@ -324,7 +324,7 @@ module scenes {
             this.ResetEvent = this.ResetEvent.bind(this);
             this.Spin = this.Spin.bind(this);
             // event listeners
-            this._btnQuit.addEventListener("click", this.End);
+            this._btnEnd.addEventListener("click", this.End);
             this._btnReset.addEventListener("click", this.ResetEvent);
 
             this.Main();
