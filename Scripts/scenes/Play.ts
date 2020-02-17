@@ -30,7 +30,7 @@ module scenes {
         private _sevens: number;
         private _blanks: number;
         // x value for the reel images
-        private _reelObjXLocation: number[];
+        private _reelXPonit: number[];
         // reel images
         private _reels: objects.Reel[];
 
@@ -51,7 +51,7 @@ module scenes {
             for (let index = 0; index < this._spinResult.length; index++) {
                 let result: string = this._spinResult[index];
                 this._reels[index] = new objects.Reel(result);
-                this._reels[index].x = this._reelObjXLocation[index];
+                this._reels[index].x = this._reelXPonit[index];
                 this.addChild(this._reels[index]);
             }
         }
@@ -313,10 +313,10 @@ module scenes {
             // Reel array. The individual reels are created after each spin
             this._reels = new Array<objects.Reel>();
             // instantiates the x coordinates for the reels
-            this._reelObjXLocation = new Array<number>();
-            this._reelObjXLocation[0] = 230;
-            this._reelObjXLocation[1] = 302;
-            this._reelObjXLocation[2] = 376;
+            this._reelXPonit = new Array<number>();
+            this._reelXPonit[0] = 230;
+            this._reelXPonit[1] = 302;
+            this._reelXPonit[2] = 376;
             // Places the slot machine in the center of the canvas
             this._slotMachine.x = (-20);
             // Binding event handlers to the play scene
