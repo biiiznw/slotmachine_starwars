@@ -10,7 +10,6 @@ module scenes {
         public Main(): void {
             this.addChild(this._background);
             this.addChild(this._playButton);
-            
             this._playButton.on("click", () => {
                 config.Game.SCENE_STATE = scenes.State.PLAY;
                 createjs.Sound.stop();
