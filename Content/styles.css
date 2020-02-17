@@ -1,0 +1,27 @@
+body {
+    background-image: url("/Assets/images/background.jpg");
+  }
+
+#canvas {
+    /* background-color: white;
+    border: 1px dotted black;
+    border-radius: 10px; */
+}
+#betting {
+    width: 200px;
+    position: absolute;
+    display: none;
+    height:30px
+}
+input[type="text"]
+{
+    font-size:15px;
+}
+#mainContent{
+    width: 50%;
+    margin: 100px auto;
+}
+#subContent{
+    width: 50%;
+    margin: 0px auto 0px 220px;
+}
